@@ -329,7 +329,7 @@ opt_ASR/
 - `payload_command`
 - `oracle_type`
 
-## 当前建议执行顺序
+## 当前执行顺序
 
 1. `plan_schedule/generate_initial_plans.py`
 2. `plan_schedule/plan_selector.py`
@@ -340,8 +340,3 @@ opt_ASR/
 7. `resource_generator/export_samples_md.py`
 8. `MCP_Agent/batch_run_mcp_ipi.py` 或 `MCP_Agent/run_mcp_ipi.py`
 9. `optimizer/optimize_results.py`
-
-## 备注
-
-- `resource_generator/__pycache__/compose_resource*.pyc` 只是旧产物缓存，不代表当前仓库里还有 `compose_resource.py` 源文件。
-- README 这里只说明当前主链路使用的核心脚本，不展开 `__pycache__`、历史副本文件等内容。
