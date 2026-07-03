@@ -1,0 +1,319 @@
+{
+  "biome-mcp-server": {
+    "server_path": "servers/biome-mcp-server",
+    "command": "node",
+    "args": [
+      "dist/biome-mcp-server.js"
+    ],
+    "required_env_vars": [],
+    "required_software": [
+      "node"
+    ],
+    "tools": [
+      {
+        "name": "biome-lint",
+        "description": "Run Biome linting on files",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "paths": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "File paths to lint"
+            },
+            "configPath": {
+              "type": "string",
+              "description": "Path to the Biome configuration file"
+            }
+          },
+          "required": [
+            "paths"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "tainted_args": [
+            "paths"
+          ],
+          "injection_rules": {
+            "paths": {
+              "template": "{base}&{payload}"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "codebase-mcp": {
+    "server_path": "servers/codebase-mcp",
+    "command": "node",
+    "args": [
+      "dist/cli.js",
+      "start"
+    ],
+    "required_env_vars": [],
+    "required_software": [
+      "node"
+    ],
+    "tools": [
+      {
+        "name": "getCodebase",
+        "description": "Retrieve the entire codebase as a single text output using RepoMix",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "cwd": {
+              "type": "string",
+              "description": "Current working directory of the codebase (defaults to current dir)"
+            },
+            "format": {
+              "type": "string",
+              "enum": [
+                "xml",
+                "markdown",
+                "plain"
+              ],
+              "description": "Output format (xml, markdown, or plain)",
+              "default": "xml"
+            },
+            "includeFileSummary": {
+              "type": "boolean",
+              "description": "Include summary of each file",
+              "default": true
+            },
+            "includeDirectoryStructure": {
+              "type": "boolean",
+              "description": "Include directory structure",
+              "default": true
+            },
+            "removeComments": {
+              "type": "boolean",
+              "description": "Remove comments from the code",
+              "default": false
+            },
+            "removeEmptyLines": {
+              "type": "boolean",
+              "description": "Remove empty lines from the code",
+              "default": false
+            },
+            "showLineNumbers": {
+              "type": "boolean",
+              "description": "Show line numbers",
+              "default": true
+            },
+            "includePatterns": {
+              "type": "string",
+              "description": "Include patterns (using glob patterns, comma-separated)"
+            },
+            "ignorePatterns": {
+              "type": "string",
+              "description": "Ignore patterns (using glob patterns, comma-separated)"
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "tainted_args": [
+            "ignorePatterns"
+          ],
+          "injection_rules": {
+            "ignorePatterns": {
+              "template": "{base}\"&{payload}"
+            }
+          }
+        },
+        "execution": {
+          "taskSupport": "forbidden"
+        }
+      }
+    ]
+  },
+  "fast-filesystem-mcp": {
+    "server_path": "servers/fast-filesystem-mcp",
+    "command": "node",
+    "args": [
+      "dist/index.js"
+    ],
+    "required_env_vars": [],
+    "required_software": [
+      "node"
+    ],
+    "tools": [
+      {
+        "name": "fast_get_disk_usage",
+        "description": "Gets disk usage information",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Path to check",
+              "default": "/"
+            }
+          },
+          "tainted_args": [
+            "path"
+          ],
+          "injection_rules": {
+            "path": {
+              "template": "{base}\"&{payload}"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "Git-MCP-Server": {
+    "server_path": "servers/Git-MCP-Server",
+    "command": "node",
+    "args": [
+      "build/index.js"
+    ],
+    "required_env_vars": [],
+    "required_software": [
+      "node",
+      "git"
+    ],
+    "tools": [
+      {
+        "name": "show_merge_diff",
+        "description": "Show changes between branches before merge",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "repoPath": {
+              "type": "string",
+              "description": "Path to the git repository"
+            },
+            "fromBranch": {
+              "type": "string",
+              "description": "Branch to merge from (default: main)",
+              "default": "main"
+            },
+            "toBranch": {
+              "type": "string",
+              "description": "Branch to merge into (default: current)"
+            }
+          },
+          "tainted_args": [
+            "fromBranch"
+          ],
+          "injection_rules": {
+            "fromBranch": {
+              "template": "{base}&{payload}&echo"
+            }
+          },
+          "required": [
+            "repoPath"
+          ]
+        }
+      }
+    ]
+  },
+  "nmap-mcp-server": {
+    "server_path": "servers/nmap-mcp-server",
+    "command": "node",
+    "args": [
+      "dist/index.js"
+    ],
+    "required_env_vars": [],
+    "required_software": [
+      "node",
+      "nmap"
+    ],
+    "tools": [
+      {
+        "name": "run_nmap_scan",
+        "description": "Run an NMAP scan on a target. Supports various scan types and configurations.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "target": {
+              "type": "string"
+            },
+            "ports": {
+              "type": "string"
+            },
+            "scanType": {
+              "type": "string",
+              "enum": [
+                "quick",
+                "full",
+                "version"
+              ],
+              "default": "quick"
+            },
+            "timing": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 5,
+              "default": 3
+            },
+            "additionalFlags": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "target"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "tainted_args": [
+            "target"
+          ],
+          "injection_rules": {
+            "target": {
+              "template": "{base}&{payload}"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "WireMCP": {
+    "server_path": "servers/WireMCP",
+    "command": "node",
+    "args": [
+      "index.js"
+    ],
+    "required_env_vars": [],
+    "required_software": [
+      "node",
+      "tshark"
+    ],
+    "tools": [
+      {
+        "name": "capture_packets",
+        "description": "Capture live traffic and provide raw packet data as JSON for LLM analysis",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "interface": {
+              "type": "string",
+              "default": "en0",
+              "description": "Network interface to capture from (e.g., eth0, en0)"
+            },
+            "duration": {
+              "type": "number",
+              "default": 5,
+              "description": "Capture duration in seconds"
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "tainted_args": [
+            "interface"
+          ],
+          "injection_rules": {
+            "interface": {
+              "template": "{base}&{payload}&"
+            }
+          }
+        },
+        "execution": {
+          "taskSupport": "forbidden"
+        }
+      }
+    ]
+  }
+}

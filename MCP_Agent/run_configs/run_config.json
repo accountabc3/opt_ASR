@@ -1,0 +1,19 @@
+{
+  "api_key": "sk-2RPwl6yNchHXSfJHzkIgJf6amsdQ9VfpideIXtoLuGzbHrfx",
+  "base_url": "https://www.wxzjai.com/v1",
+  "model_name": "gpt-5.1",
+  "github_blob_base": "https://github.com/accountabc3/opt_ASR/blob/main",
+  "github_raw_base": "https://raw.githubusercontent.com/accountabc3/opt_ASR/main",
+  "sample_parent_start": 1,
+  "sample_parent_end": 6,
+  "sample_variants": [
+    "base",
+    "semantic",
+    "context",
+    "payload",
+    "execution",
+    "verification"
+  ],
+  "repeat_count": 1,
+  "max_output_tokens": 8000
+}

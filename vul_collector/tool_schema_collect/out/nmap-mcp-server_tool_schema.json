@@ -1,0 +1,52 @@
+{
+  "serverInfo": {
+    "protocolVersion": "2024-11-05",
+    "capabilities": {
+      "tools": {}
+    },
+    "serverInfo": {
+      "name": "nmap-server",
+      "version": "0.1.0"
+    }
+  },
+  "tools": [
+    {
+      "name": "run_nmap_scan",
+      "description": "Run an NMAP scan on a target. Supports various scan types and configurations.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "target": {
+            "type": "string"
+          },
+          "ports": {
+            "type": "string"
+          },
+          "scanType": {
+            "type": "string",
+            "enum": [
+              "quick",
+              "full",
+              "version"
+            ],
+            "default": "quick"
+          },
+          "timing": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 5,
+            "default": 3
+          },
+          "additionalFlags": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "target"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      }
+    }
+  ]
+}

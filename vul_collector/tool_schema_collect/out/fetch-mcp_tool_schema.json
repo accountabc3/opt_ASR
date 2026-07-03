@@ -1,0 +1,50 @@
+{
+  "serverInfo": {
+    "protocolVersion": "2024-11-05",
+    "capabilities": {
+      "tools": {
+        "listChanged": true
+      }
+    },
+    "serverInfo": {
+      "name": "fetch-mcp",
+      "version": "1.0.0"
+    }
+  },
+  "tools": [
+    {
+      "name": "fetch_url",
+      "description": "Fetch a URL over HTTP(S) and return text content for external-resource reading.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "The http or https URL to fetch."
+          },
+          "start_index": {
+            "type": "integer",
+            "minimum": 0,
+            "default": 0,
+            "description": "Character offset for paginated reads."
+          },
+          "max_length": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "maximum": 50000,
+            "default": 12000,
+            "description": "Maximum number of characters to return."
+          }
+        },
+        "required": [
+          "url"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "serverInfo": {
+    "protocolVersion": "2024-11-05",
+    "capabilities": {
+      "tools": {}
+    },
+    "serverInfo": {
+      "name": "simple-merge-review",
+      "version": "1.0.0"
+    }
+  },
+  "tools": [
+    {
+      "name": "show_merge_diff",
+      "description": "Show changes between branches before merge",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "repoPath": {
+            "type": "string",
+            "description": "Path to the git repository"
+          },
+          "fromBranch": {
+            "type": "string",
+            "description": "Branch to merge from (default: main)",
+            "default": "main"
+          },
+          "toBranch": {
+            "type": "string",
+            "description": "Branch to merge into (default: current)"
+          }
+        },
+        "required": [
+          "repoPath"
+        ]
+      }
+    },
+    {
+      "name": "quick_merge_summary",
+      "description": "Quick summary of changes for merge",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "repoPath": {
+            "type": "string",
+            "description": "Path to the git repository"
+          },
+          "branch": {
+            "type": "string",
+            "description": "Branch to analyze (default: current)"
+          }
+        },
+        "required": [
+          "repoPath"
+        ]
+      }
+    },
+    {
+      "name": "show_file_diff",
+      "description": "Show specific changes in a file between branches",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "repoPath": {
+            "type": "string",
+            "description": "Path to the git repository"
+          },
+          "filename": {
+            "type": "string",
+            "description": "Path to the file relative to the repository root"
+          },
+          "fromBranch": {
+            "type": "string",
+            "description": "Branch to compare from (default: main/master)"
+          },
+          "toBranch": {
+            "type": "string",
+            "description": "Branch to compare to (default: current)"
+          }
+        },
+        "required": [
+          "repoPath",
+          "filename"
+        ]
+      }
+    }
+  ]
+}

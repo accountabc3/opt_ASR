@@ -1,0 +1,13 @@
+{
+  "vulnerable_servers": [
+    "biome-mcp-server",
+    "codebase-mcp",
+    "fast-filesystem-mcp",
+    "Git-MCP-Server",
+    "nmap-mcp-server",
+    "WireMCP"
+  ],
+  "infrastructure_servers": [
+    "fetch-mcp"
+  ]
+}
