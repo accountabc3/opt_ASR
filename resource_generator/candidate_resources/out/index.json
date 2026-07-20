@@ -1,0 +1,13 @@
+{
+  "sample_count": 1,
+  "samples": [
+    {
+      "id": 1,
+      "file_name": "0001_context_reframe.md",
+      "path": "resource_generator/candidate_resources/out/0001_context_reframe.md",
+      "server": "biome-mcp-server",
+      "tool": "biome-lint",
+      "command": "echo_write_file"
+    }
+  ]
+}
