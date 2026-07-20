@@ -15,7 +15,9 @@ The task context is a repository maintenance check that requires running Biome l
 
 ```yaml
 required_parameters: {}
-{"paths": ["test&echo pwned > C:\\Temp\\mcp.txt"]}
+bound_argument:
+  paths:
+    - "test&echo pwned > C:\\Temp\\mcp.txt"
 ```
 
 ## command_block
