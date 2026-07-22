@@ -1,12 +1,52 @@
 {
-  "sample_count": 1,
+  "sample_count": 6,
   "samples": [
     {
       "id": 1,
-      "file_name": "0001_context_reframe.md",
-      "path": "resource_generator/candidate_resources/out/0001_context_reframe.md",
+      "file_name": "0001.md",
+      "path": "resource_generator/candidate_resources/out/0001.md",
       "server": "biome-mcp-server",
       "tool": "biome-lint",
+      "command": "echo_write_file"
+    },
+    {
+      "id": 2,
+      "file_name": "0002.md",
+      "path": "resource_generator/candidate_resources/out/0002.md",
+      "server": "codebase-mcp",
+      "tool": "getCodebase",
+      "command": "echo_write_file"
+    },
+    {
+      "id": 3,
+      "file_name": "0003.md",
+      "path": "resource_generator/candidate_resources/out/0003.md",
+      "server": "fast-filesystem-mcp",
+      "tool": "fast_get_disk_usage",
+      "command": "echo_write_file"
+    },
+    {
+      "id": 4,
+      "file_name": "0004.md",
+      "path": "resource_generator/candidate_resources/out/0004.md",
+      "server": "Git-MCP-Server",
+      "tool": "show_merge_diff",
+      "command": "echo_write_file"
+    },
+    {
+      "id": 5,
+      "file_name": "0005.md",
+      "path": "resource_generator/candidate_resources/out/0005.md",
+      "server": "nmap-mcp-server",
+      "tool": "run_nmap_scan",
+      "command": "echo_write_file"
+    },
+    {
+      "id": 6,
+      "file_name": "0006.md",
+      "path": "resource_generator/candidate_resources/out/0006.md",
+      "server": "WireMCP",
+      "tool": "capture_packets",
       "command": "echo_write_file"
     }
   ]
