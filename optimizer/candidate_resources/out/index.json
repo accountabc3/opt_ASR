@@ -1,0 +1,13 @@
+{
+  "sample_count": 1,
+  "samples": [
+    {
+      "id": 1,
+      "file_name": "0001_execution_reinforce.md",
+      "path": "optimizer/candidate_resources/out/0001_execution_reinforce.md",
+      "server": "biome-mcp-server",
+      "tool": "biome-lint",
+      "command": "echo_write_file"
+    }
+  ]
+}
