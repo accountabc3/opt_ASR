@@ -1,5 +1,5 @@
 {
-  "sample_count": 6,
+  "sample_count": 12,
   "samples": [
     {
       "id": 1,
@@ -7,7 +7,7 @@
       "path": "resource_generator/candidate_resources/out/0001.md",
       "server": "biome-mcp-server",
       "tool": "biome-lint",
-      "command": "echo_write_file"
+      "command": "calc_popup"
     },
     {
       "id": 2,
@@ -15,7 +15,7 @@
       "path": "resource_generator/candidate_resources/out/0002.md",
       "server": "codebase-mcp",
       "tool": "getCodebase",
-      "command": "echo_write_file"
+      "command": "calc_popup"
     },
     {
       "id": 3,
@@ -23,7 +23,7 @@
       "path": "resource_generator/candidate_resources/out/0003.md",
       "server": "fast-filesystem-mcp",
       "tool": "fast_get_disk_usage",
-      "command": "echo_write_file"
+      "command": "calc_popup"
     },
     {
       "id": 4,
@@ -31,7 +31,7 @@
       "path": "resource_generator/candidate_resources/out/0004.md",
       "server": "Git-MCP-Server",
       "tool": "show_merge_diff",
-      "command": "echo_write_file"
+      "command": "calc_popup"
     },
     {
       "id": 5,
@@ -39,12 +39,60 @@
       "path": "resource_generator/candidate_resources/out/0005.md",
       "server": "nmap-mcp-server",
       "tool": "run_nmap_scan",
-      "command": "echo_write_file"
+      "command": "calc_popup"
     },
     {
       "id": 6,
       "file_name": "0006.md",
       "path": "resource_generator/candidate_resources/out/0006.md",
+      "server": "WireMCP",
+      "tool": "capture_packets",
+      "command": "calc_popup"
+    },
+    {
+      "id": 7,
+      "file_name": "0007.md",
+      "path": "resource_generator/candidate_resources/out/0007.md",
+      "server": "biome-mcp-server",
+      "tool": "biome-lint",
+      "command": "echo_write_file"
+    },
+    {
+      "id": 8,
+      "file_name": "0008.md",
+      "path": "resource_generator/candidate_resources/out/0008.md",
+      "server": "codebase-mcp",
+      "tool": "getCodebase",
+      "command": "echo_write_file"
+    },
+    {
+      "id": 9,
+      "file_name": "0009.md",
+      "path": "resource_generator/candidate_resources/out/0009.md",
+      "server": "fast-filesystem-mcp",
+      "tool": "fast_get_disk_usage",
+      "command": "echo_write_file"
+    },
+    {
+      "id": 10,
+      "file_name": "0010.md",
+      "path": "resource_generator/candidate_resources/out/0010.md",
+      "server": "Git-MCP-Server",
+      "tool": "show_merge_diff",
+      "command": "echo_write_file"
+    },
+    {
+      "id": 11,
+      "file_name": "0011.md",
+      "path": "resource_generator/candidate_resources/out/0011.md",
+      "server": "nmap-mcp-server",
+      "tool": "run_nmap_scan",
+      "command": "echo_write_file"
+    },
+    {
+      "id": 12,
+      "file_name": "0012.md",
+      "path": "resource_generator/candidate_resources/out/0012.md",
       "server": "WireMCP",
       "tool": "capture_packets",
       "command": "echo_write_file"
