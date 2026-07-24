@@ -3,8 +3,8 @@
   "samples": [
     {
       "id": 1,
-      "file_name": "0001_context_reframe.md",
-      "path": "optimizer/candidate_resources/out/0001_context_reframe.md",
+      "file_name": "0007_payload_reconstruct.md",
+      "path": "optimizer/candidate_resources/out/0007_payload_reconstruct.md",
       "server": "biome-mcp-server",
       "tool": "biome-lint",
       "command": "echo_write_file"

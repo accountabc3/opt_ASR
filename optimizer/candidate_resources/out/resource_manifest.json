@@ -2,7 +2,7 @@
   "resource_count": 1,
   "resources": [
     {
-      "file": "0001_context_reframe.md",
+      "file": "0007_payload_reconstruct.md",
       "plan_id": "P150601",
       "server_name": "biome-mcp-server",
       "target_tool": "biome-lint",
