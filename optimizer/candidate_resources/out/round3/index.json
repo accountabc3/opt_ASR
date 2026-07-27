@@ -1,0 +1,45 @@
+{
+  "sample_count": 5,
+  "samples": [
+    {
+      "id": 1,
+      "file_name": "0001_payload_reconstruct.md",
+      "path": "optimizer/candidate_resources/out/round2/0001_payload_reconstruct.md",
+      "server": "biome-mcp-server",
+      "tool": "biome-lint",
+      "command": "calc_popup"
+    },
+    {
+      "id": 2,
+      "file_name": "0002_payload_reconstruct.md",
+      "path": "optimizer/candidate_resources/out/round2/0002_payload_reconstruct.md",
+      "server": "codebase-mcp",
+      "tool": "getCodebase",
+      "command": "calc_popup"
+    },
+    {
+      "id": 3,
+      "file_name": "0003_payload_reconstruct.md",
+      "path": "optimizer/candidate_resources/out/round2/0003_payload_reconstruct.md",
+      "server": "fast-filesystem-mcp",
+      "tool": "fast_get_disk_usage",
+      "command": "calc_popup"
+    },
+    {
+      "id": 4,
+      "file_name": "0004_payload_reconstruct.md",
+      "path": "optimizer/candidate_resources/out/round2/0004_payload_reconstruct.md",
+      "server": "Git-MCP-Server",
+      "tool": "show_merge_diff",
+      "command": "calc_popup"
+    },
+    {
+      "id": 5,
+      "file_name": "0006_payload_reconstruct.md",
+      "path": "optimizer/candidate_resources/out/round2/0006_payload_reconstruct.md",
+      "server": "WireMCP",
+      "tool": "capture_packets",
+      "command": "calc_popup"
+    }
+  ]
+}
