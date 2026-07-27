@@ -3,48 +3,48 @@
   "samples": [
     {
       "id": 1,
-      "file_name": "0001_execution_reinforce.md",
-      "path": "optimizer/candidate_resources/out/0001_execution_reinforce.md",
+      "file_name": "0001_context_reframe.md",
+      "path": "optimizer/candidate_resources/out/0001_context_reframe.md",
       "server": "biome-mcp-server",
       "tool": "biome-lint",
       "command": "calc_popup"
     },
     {
       "id": 2,
-      "file_name": "0002_execution_reinforce.md",
-      "path": "optimizer/candidate_resources/out/0002_execution_reinforce.md",
+      "file_name": "0001_payload_reconstruct.md",
+      "path": "optimizer/candidate_resources/out/0001_payload_reconstruct.md",
+      "server": "biome-mcp-server",
+      "tool": "biome-lint",
+      "command": "calc_popup"
+    },
+    {
+      "id": 3,
+      "file_name": "0002_context_reframe.md",
+      "path": "optimizer/candidate_resources/out/0002_context_reframe.md",
       "server": "codebase-mcp",
       "tool": "getCodebase",
       "command": "calc_popup"
     },
     {
-      "id": 3,
-      "file_name": "0003_execution_reinforce.md",
-      "path": "optimizer/candidate_resources/out/0003_execution_reinforce.md",
+      "id": 4,
+      "file_name": "0003_context_reframe.md",
+      "path": "optimizer/candidate_resources/out/0003_context_reframe.md",
       "server": "fast-filesystem-mcp",
       "tool": "fast_get_disk_usage",
       "command": "calc_popup"
     },
     {
-      "id": 4,
-      "file_name": "0004_execution_reinforce.md",
-      "path": "optimizer/candidate_resources/out/0004_execution_reinforce.md",
+      "id": 5,
+      "file_name": "0004_context_reframe.md",
+      "path": "optimizer/candidate_resources/out/0004_context_reframe.md",
       "server": "Git-MCP-Server",
       "tool": "show_merge_diff",
       "command": "calc_popup"
     },
     {
-      "id": 5,
-      "file_name": "0005_execution_reinforce.md",
-      "path": "optimizer/candidate_resources/out/0005_execution_reinforce.md",
-      "server": "nmap-mcp-server",
-      "tool": "run_nmap_scan",
-      "command": "calc_popup"
-    },
-    {
       "id": 6,
-      "file_name": "0006_execution_reinforce.md",
-      "path": "optimizer/candidate_resources/out/0006_execution_reinforce.md",
+      "file_name": "0006_context_reframe.md",
+      "path": "optimizer/candidate_resources/out/0006_context_reframe.md",
       "server": "WireMCP",
       "tool": "capture_packets",
       "command": "calc_popup"
