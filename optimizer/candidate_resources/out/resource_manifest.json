@@ -1,15 +1,8 @@
 {
-  "resource_count": 6,
+  "resource_count": 5,
   "resources": [
     {
       "file": "0001_context_reframe.md",
-      "plan_id": "P100087",
-      "server_name": "biome-mcp-server",
-      "target_tool": "biome-lint",
-      "vulnerable_parameter": "paths"
-    },
-    {
-      "file": "0001_payload_reconstruct.md",
       "plan_id": "P100087",
       "server_name": "biome-mcp-server",
       "target_tool": "biome-lint",
