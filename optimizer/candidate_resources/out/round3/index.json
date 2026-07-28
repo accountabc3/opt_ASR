@@ -1,44 +1,28 @@
 {
-  "sample_count": 5,
+  "sample_count": 3,
   "samples": [
     {
       "id": 1,
-      "file_name": "0001_payload_reconstruct.md",
-      "path": "optimizer/candidate_resources/out/round3/0001_payload_reconstruct.md",
-      "server": "biome-mcp-server",
-      "tool": "biome-lint",
-      "command": "calc_popup"
-    },
-    {
-      "id": 2,
-      "file_name": "0002_payload_reconstruct.md",
-      "path": "optimizer/candidate_resources/out/round3/0002_payload_reconstruct.md",
+      "file_name": "0002_execution_reinforce.md",
+      "path": "optimizer/candidate_resources/out/round3/0002_execution_reinforce.md",
       "server": "codebase-mcp",
       "tool": "getCodebase",
       "command": "calc_popup"
     },
     {
-      "id": 3,
-      "file_name": "0003_payload_reconstruct.md",
-      "path": "optimizer/candidate_resources/out/round3/0003_payload_reconstruct.md",
+      "id": 2,
+      "file_name": "0003_execution_reinforce.md",
+      "path": "optimizer/candidate_resources/out/round3/0003_execution_reinforce.md",
       "server": "fast-filesystem-mcp",
       "tool": "fast_get_disk_usage",
       "command": "calc_popup"
     },
     {
-      "id": 4,
-      "file_name": "0004_payload_reconstruct.md",
-      "path": "optimizer/candidate_resources/out/round3/0004_payload_reconstruct.md",
-      "server": "Git-MCP-Server",
-      "tool": "show_merge_diff",
-      "command": "calc_popup"
-    },
-    {
-      "id": 5,
-      "file_name": "0006_payload_reconstruct.md",
-      "path": "optimizer/candidate_resources/out/round3/0006_payload_reconstruct.md",
-      "server": "WireMCP",
-      "tool": "capture_packets",
+      "id": 3,
+      "file_name": "0005_execution_reinforce.md",
+      "path": "optimizer/candidate_resources/out/round3/0005_execution_reinforce.md",
+      "server": "nmap-mcp-server",
+      "tool": "run_nmap_scan",
       "command": "calc_popup"
     }
   ]
