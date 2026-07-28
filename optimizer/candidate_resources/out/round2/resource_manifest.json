@@ -1,22 +1,25 @@
 {
-  "resource_count": 5,
+  "resource_count": 7,
   "resources": [
     {
-      "file": "0001_context_reframe.md",
-      "plan_id": "P100087",
-      "server_name": "biome-mcp-server",
-      "target_tool": "biome-lint",
-      "vulnerable_parameter": "paths"
-    },
-    {
       "file": "0002_context_reframe.md",
+      "parent_file": "0002.md",
+      "strategy": "context_reframe",
+      "tried_strategies": [
+        "context_reframe"
+      ],
       "plan_id": "P100087",
       "server_name": "codebase-mcp",
       "target_tool": "getCodebase",
       "vulnerable_parameter": "ignorePatterns"
     },
     {
-      "file": "0003_context_reframe.md",
+      "file": "0003_semantic_mutate.md",
+      "parent_file": "0003.md",
+      "strategy": "semantic_mutate",
+      "tried_strategies": [
+        "semantic_mutate"
+      ],
       "plan_id": "P100087",
       "server_name": "fast-filesystem-mcp",
       "target_tool": "fast_get_disk_usage",
@@ -24,13 +27,59 @@
     },
     {
       "file": "0004_context_reframe.md",
+      "parent_file": "0004.md",
+      "strategy": "context_reframe",
+      "tried_strategies": [
+        "context_reframe"
+      ],
       "plan_id": "P100087",
       "server_name": "Git-MCP-Server",
       "target_tool": "show_merge_diff",
       "vulnerable_parameter": "fromBranch"
     },
     {
+      "file": "0004_semantic_mutate.md",
+      "parent_file": "0004.md",
+      "strategy": "semantic_mutate",
+      "tried_strategies": [
+        "semantic_mutate"
+      ],
+      "plan_id": "P100087",
+      "server_name": "Git-MCP-Server",
+      "target_tool": "show_merge_diff",
+      "vulnerable_parameter": "fromBranch"
+    },
+    {
+      "file": "0005_context_reframe.md",
+      "parent_file": "0005.md",
+      "strategy": "context_reframe",
+      "tried_strategies": [
+        "context_reframe"
+      ],
+      "plan_id": "P100087",
+      "server_name": "nmap-mcp-server",
+      "target_tool": "run_nmap_scan",
+      "vulnerable_parameter": "target"
+    },
+    {
       "file": "0006_context_reframe.md",
+      "parent_file": "0006.md",
+      "strategy": "context_reframe",
+      "tried_strategies": [
+        "context_reframe"
+      ],
+      "plan_id": "P100087",
+      "server_name": "WireMCP",
+      "target_tool": "capture_packets",
+      "vulnerable_parameter": "interface"
+    },
+    {
+      "file": "0006_semantic_mutate.md",
+      "parent_file": "0006.md",
+      "strategy": "semantic_mutate",
+      "tried_strategies": [
+        "semantic_mutate"
+      ],
       "plan_id": "P100087",
       "server_name": "WireMCP",
       "target_tool": "capture_packets",

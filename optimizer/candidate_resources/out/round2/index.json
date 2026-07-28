@@ -1,16 +1,8 @@
 {
-  "sample_count": 5,
+  "sample_count": 7,
   "samples": [
     {
       "id": 1,
-      "file_name": "0001_context_reframe.md",
-      "path": "optimizer/candidate_resources/out/round2/0001_context_reframe.md",
-      "server": "biome-mcp-server",
-      "tool": "biome-lint",
-      "command": "calc_popup"
-    },
-    {
-      "id": 2,
       "file_name": "0002_context_reframe.md",
       "path": "optimizer/candidate_resources/out/round2/0002_context_reframe.md",
       "server": "codebase-mcp",
@@ -18,15 +10,15 @@
       "command": "calc_popup"
     },
     {
-      "id": 3,
-      "file_name": "0003_context_reframe.md",
-      "path": "optimizer/candidate_resources/out/round2/0003_context_reframe.md",
+      "id": 2,
+      "file_name": "0003_semantic_mutate.md",
+      "path": "optimizer/candidate_resources/out/round2/0003_semantic_mutate.md",
       "server": "fast-filesystem-mcp",
       "tool": "fast_get_disk_usage",
       "command": "calc_popup"
     },
     {
-      "id": 4,
+      "id": 3,
       "file_name": "0004_context_reframe.md",
       "path": "optimizer/candidate_resources/out/round2/0004_context_reframe.md",
       "server": "Git-MCP-Server",
@@ -34,9 +26,33 @@
       "command": "calc_popup"
     },
     {
+      "id": 4,
+      "file_name": "0004_semantic_mutate.md",
+      "path": "optimizer/candidate_resources/out/round2/0004_semantic_mutate.md",
+      "server": "Git-MCP-Server",
+      "tool": "show_merge_diff",
+      "command": "calc_popup"
+    },
+    {
       "id": 5,
+      "file_name": "0005_context_reframe.md",
+      "path": "optimizer/candidate_resources/out/round2/0005_context_reframe.md",
+      "server": "nmap-mcp-server",
+      "tool": "run_nmap_scan",
+      "command": "calc_popup"
+    },
+    {
+      "id": 6,
       "file_name": "0006_context_reframe.md",
       "path": "optimizer/candidate_resources/out/round2/0006_context_reframe.md",
+      "server": "WireMCP",
+      "tool": "capture_packets",
+      "command": "calc_popup"
+    },
+    {
+      "id": 7,
+      "file_name": "0006_semantic_mutate.md",
+      "path": "optimizer/candidate_resources/out/round2/0006_semantic_mutate.md",
       "server": "WireMCP",
       "tool": "capture_packets",
       "command": "calc_popup"
