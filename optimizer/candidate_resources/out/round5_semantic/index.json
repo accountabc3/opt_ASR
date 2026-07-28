@@ -1,0 +1,13 @@
+{
+  "sample_count": 1,
+  "samples": [
+    {
+      "id": 1,
+      "file_name": "0003_semantic_mutate.md",
+      "path": "optimizer/candidate_resources/out/round5_semantic/0003_semantic_mutate.md",
+      "server": "fast-filesystem-mcp",
+      "tool": "fast_get_disk_usage",
+      "command": "calc_popup"
+    }
+  ]
+}
