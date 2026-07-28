@@ -1,0 +1,77 @@
+{
+  "resource_count": 6,
+  "resources": [
+    {
+      "file": "0001_execution_reinforce.md",
+      "parent_file": "0001.md",
+      "strategy": "execution_reinforce",
+      "tried_strategies": [
+        "execution_reinforce"
+      ],
+      "plan_id": "P100087",
+      "server_name": "biome-mcp-server",
+      "target_tool": "biome-lint",
+      "vulnerable_parameter": "paths"
+    },
+    {
+      "file": "0002_execution_reinforce.md",
+      "parent_file": "0002.md",
+      "strategy": "execution_reinforce",
+      "tried_strategies": [
+        "execution_reinforce"
+      ],
+      "plan_id": "P100087",
+      "server_name": "codebase-mcp",
+      "target_tool": "getCodebase",
+      "vulnerable_parameter": "ignorePatterns"
+    },
+    {
+      "file": "0003_execution_reinforce.md",
+      "parent_file": "0003.md",
+      "strategy": "execution_reinforce",
+      "tried_strategies": [
+        "execution_reinforce"
+      ],
+      "plan_id": "P100087",
+      "server_name": "fast-filesystem-mcp",
+      "target_tool": "fast_get_disk_usage",
+      "vulnerable_parameter": "path"
+    },
+    {
+      "file": "0004_execution_reinforce.md",
+      "parent_file": "0004.md",
+      "strategy": "execution_reinforce",
+      "tried_strategies": [
+        "execution_reinforce"
+      ],
+      "plan_id": "P100087",
+      "server_name": "Git-MCP-Server",
+      "target_tool": "show_merge_diff",
+      "vulnerable_parameter": "fromBranch"
+    },
+    {
+      "file": "0005_execution_reinforce.md",
+      "parent_file": "0005.md",
+      "strategy": "execution_reinforce",
+      "tried_strategies": [
+        "execution_reinforce"
+      ],
+      "plan_id": "P100087",
+      "server_name": "nmap-mcp-server",
+      "target_tool": "run_nmap_scan",
+      "vulnerable_parameter": "target"
+    },
+    {
+      "file": "0006_execution_reinforce.md",
+      "parent_file": "0006.md",
+      "strategy": "execution_reinforce",
+      "tried_strategies": [
+        "execution_reinforce"
+      ],
+      "plan_id": "P100087",
+      "server_name": "WireMCP",
+      "target_tool": "capture_packets",
+      "vulnerable_parameter": "interface"
+    }
+  ]
+}
