@@ -1,0 +1,21 @@
+{
+  "sample_count": 2,
+  "samples": [
+    {
+      "id": 1,
+      "file_name": "0002_semantic_mutate.md",
+      "path": "optimizer/candidate_resources/out/round4/0002_semantic_mutate.md",
+      "server": "codebase-mcp",
+      "tool": "getCodebase",
+      "command": "calc_popup"
+    },
+    {
+      "id": 2,
+      "file_name": "0003_semantic_mutate.md",
+      "path": "optimizer/candidate_resources/out/round4/0003_semantic_mutate.md",
+      "server": "fast-filesystem-mcp",
+      "tool": "fast_get_disk_usage",
+      "command": "calc_popup"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "resource_count": 2,
+  "resources": [
+    {
+      "file": "0002_semantic_mutate.md",
+      "parent_file": "0002.md",
+      "strategy": "semantic_mutate",
+      "last_strategy": "semantic_mutate",
+      "plan_id": "P100087",
+      "server_name": "codebase-mcp",
+      "target_tool": "getCodebase",
+      "vulnerable_parameter": "ignorePatterns"
+    },
+    {
+      "file": "0003_semantic_mutate.md",
+      "parent_file": "0003.md",
+      "strategy": "semantic_mutate",
+      "last_strategy": "semantic_mutate",
+      "plan_id": "P100087",
+      "server_name": "fast-filesystem-mcp",
+      "target_tool": "fast_get_disk_usage",
+      "vulnerable_parameter": "path"
+    }
+  ]
+}
