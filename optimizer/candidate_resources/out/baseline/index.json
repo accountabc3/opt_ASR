@@ -1,0 +1,13 @@
+{
+  "sample_count": 1,
+  "samples": [
+    {
+      "id": 1,
+      "file_name": "0001_base.md",
+      "path": "optimizer/candidate_resources/out/baseline/0001_base.md",
+      "server": "biome-mcp-server",
+      "tool": "biome-lint",
+      "command": "calc_popup"
+    }
+  ]
+}
