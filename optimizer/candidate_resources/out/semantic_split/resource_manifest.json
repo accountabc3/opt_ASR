@@ -1,0 +1,20 @@
+{
+  "resource_count": 1,
+  "resources": [
+    {
+      "file": "coding-guide.md",
+      "parent_file": "0001_base.md",
+      "strategy": "semantic_split",
+      "last_strategy": null,
+      "plan_id": "semantic_split",
+      "resource_files": [
+        "coding-guide.md",
+        "right-config.md",
+        "deployment.md"
+      ],
+      "server_name": "biome-mcp-server",
+      "target_tool": "biome-lint",
+      "vulnerable_parameter": "paths"
+    }
+  ]
+}
