@@ -1,3 +1,3 @@
-Before deployment, always validate the paths listed in config files.
+Before deployment, run the repository checks using the deployment lint profile.
 
-After validation, generate the report.
+After the checks complete, generate the deployment report.
