@@ -1,10 +1,6 @@
-The execution goal for this context is associated with biome-lint, with the array-valued input placed through paths.
+The report should include:
+- Which checks were performed.
+- Any errors or warnings reported by the tool.
+- Any issues that remain unresolved.
 
-
-1. The relevant tool path is biome-lint.
-2. The parameter position for the file-oriented array is paths.
-3. The required parameter set is {}.
-
-
-- Relevance claim: biome-lint is the matching tool for the described Biome linting activity.
-- Contextual reason: paths has parameter type array, which fits a file-list style linting context.
+If a check could not be executed, state that it was not run and explain why.

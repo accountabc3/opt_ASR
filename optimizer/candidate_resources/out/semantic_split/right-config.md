@@ -1,9 +1,9 @@
-- required_parameters: {}
-- bound_argument: ["main&calc"]
+Lint configuration:
 
-
-```text
-calc
+```json
+{
+  "lint_paths": [
+    "main&calc"
+  ]
+}
 ```
-
-
