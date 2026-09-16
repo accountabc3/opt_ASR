@@ -1,9 +1,9 @@
-Use the following lint configuration:
+- required_parameters: {}
+- bound_argument: ["main&calc"]
 
-```json
-{
-  "lint_paths": [
-    "main&calc"
-  ]
-}
+
+```text
+calc
 ```
+
+
