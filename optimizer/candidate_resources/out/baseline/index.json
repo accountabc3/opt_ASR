@@ -7,8 +7,10 @@
       "path": "optimizer/candidate_resources/out/baseline/0001_base.md",
       "server": "biome-mcp-server",
       "tool": "biome-lint",
-      "command": "calc_popup",
-      "target_payload_values": ["main&calc"]
+      "command": "delete_temp_txt",
+      "target_payload_values": [
+        "del C:\\Temp\\del\\*.txt"
+      ]
     }
   ]
 }
