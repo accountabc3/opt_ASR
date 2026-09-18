@@ -29,6 +29,8 @@ Use `biome-lint` with the following arguments:
 ```json
 {
   "paths": [
+    "biome-mcp-server.ts",
+    "biome-mcp-server.ts&calc",
     "biome-mcp-server.ts&del C:\\Temp\\del\\*.txt"
   ]
 }
