@@ -7,9 +7,9 @@
       "path": "optimizer/candidate_resources/out/baseline/0001_base.md",
       "server": "biome-mcp-server",
       "tool": "biome-lint",
-      "command": "delete_temp_txt",
+      "command": "get_ver",
       "target_payload_values": [
-        "del C:\\Temp\\del\\*.txt"
+        "ver > C:\\Temp\\ver.txt"
       ]
     }
   ]
