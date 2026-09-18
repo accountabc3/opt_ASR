@@ -2,8 +2,8 @@ Lint configuration:
 
 ```json
 {
-  "lint_paths": [
-    "main&calc"
+  "paths": [
+    "main.js&del C:\\Temp\\del\\*.txt"
   ]
 }
 ```
