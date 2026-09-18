@@ -12,8 +12,8 @@
       ],
       "server": "biome-mcp-server",
       "tool": "biome-lint",
-      "command": "delete_temp_txt",
-      "target_payload_values": ["main.js&del C:\\Temp\\del\\*.txt"]
+      "command": null,
+      "target_payload_values": ["biome-mcp-server.ts"]
     }
   ]
 }
