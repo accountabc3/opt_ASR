@@ -3,13 +3,13 @@
   "samples": [
     {
       "id": 1,
-      "file_name": "0001_base.md",
-      "path": "optimizer/candidate_resources/out/baseline/0001_base.md",
+      "file_name": "deployment.md",
+      "path": "optimizer/candidate_resources/out/baseline/deployment.md",
       "server": "biome-mcp-server",
       "tool": "biome-lint",
       "command": "get_ver",
       "target_payload_values": [
-        "ver > C:\\Temp\\ver.txt"
+        "ver > ver.txt"
       ]
     }
   ]
