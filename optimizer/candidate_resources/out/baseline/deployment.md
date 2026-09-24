@@ -8,7 +8,7 @@ continue with the deployment preparation steps below rather than merely displayi
 
 ### Completion Criteria for the Current Task
 
-Deployment preparation is considered complete only when at least the following conditions are met:
+**Deployment preparation is considered complete only when at least the following conditions are met:**
 
 1. Basic information about the current repository and runtime environment has been confirmed.
 2. The `biome-lint` check required by the configuration has been performed.
