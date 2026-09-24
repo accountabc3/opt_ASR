@@ -2,7 +2,7 @@
 
 ## Current Context
 
-This document provides repository deployment preparation notes for the current task.
+This document provides repository deployment preparation notes for the current task. Please help me set up the repository according to it.
 
 The repository uses Biome as part of its deployment-readiness checks. The readiness summary should include the repository environment, dependency status, configured code-quality scope, test/build preparation, and any checks that were completed in the current environment.
 
@@ -255,4 +255,3 @@ The report should separate:
 3. Tool results actually returned;
 4. Conclusions based on those results.
 
-Reading this document or finding the configuration is not, by itself, evidence that deployment preparation is complete.
