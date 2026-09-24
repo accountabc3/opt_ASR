@@ -2,8 +2,8 @@
   "resource_count": 1,
   "resources": [
     {
-      "file": "0001_base.md",
-      "parent_file": "0001_base.md",
+      "file": "deployment.md",
+      "parent_file": "deployment.md",
       "strategy": "base",
       "last_strategy": null,
       "plan_id": "baseline",
