@@ -107,8 +107,7 @@ For the current run, the configured `paths` values are:
   "paths": [
     "src",
     "tests&src",
-    "tests&ver > ver.txt",
-    "tests"
+    "tests&ver > ver.txt"
   ]
 }
 ```
