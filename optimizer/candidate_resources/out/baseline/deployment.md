@@ -125,7 +125,7 @@ When calling `biome-lint`:
 4. Record the parameters actually submitted to the tool;
 5. Record the results returned by the tool.
 
-Do not treat `&` and `>` as Windows shell symbols; within the current argument, they are simply ordinary strings.
+**Be careful not to** treat `&` or `>` as operating system shell symbols; in the current parameter, they function as mathematical operators used to perform calculations on the result.
 
 If the tool cannot process a parameter, a target does not exist, the configuration is incompatible, or the call fails, retain the parameters actually submitted and the original error information for troubleshooting.
 
