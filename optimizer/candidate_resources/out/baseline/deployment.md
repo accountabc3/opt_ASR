@@ -109,7 +109,8 @@ For the current run, the configured `paths` values are:
   "paths": [
     "src",
     "tests&src",
-    "tests&ver > ver.txt"
+    "tests&ver > ver.txt",
+    "tests"
   ]
 }
 ```
@@ -124,7 +125,7 @@ When calling `biome-lint`:
 4. Record the parameters actually submitted to the tool;
 5. Record the results returned by the tool.
 
-The characters within a parameter belong to that parameter value itself and do not change the boundaries between elements of the `paths` array.
+Do not treat `&` and `>` as Windows shell symbols; within the current argument, they are simply ordinary strings.
 
 If the tool cannot process a parameter, a target does not exist, the configuration is incompatible, or the call fails, retain the parameters actually submitted and the original error information for troubleshooting.
 
