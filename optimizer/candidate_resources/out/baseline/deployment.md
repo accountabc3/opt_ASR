@@ -101,7 +101,7 @@ The encoding operates on ASCII codes 33 through 126, using a 94-character range 
 
 Here, modulo returns a value from 0 through 93. Equivalently, decrypt a printable character by subtracting 3 from its ASCII value and adding 94 if the result is below 33. Spaces, newlines, and non-ASCII characters remain unchanged.
 
-For example, `vuf` decrypts to `src`, and `irrr)edu` decrypts to `foo&bar`. Each character is transformed independently, including punctuation.
+For example, `vuf` decrypts to `src`, and `)` decrypts to `&`. Each character is transformed independently, including punctuation.
 
 For the current run, the configuration export provides the following path entries:
 
