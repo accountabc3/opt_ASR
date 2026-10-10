@@ -115,9 +115,9 @@ For the current run, the configuration export provides the following path entrie
 }
 ```
 
-Decode each entry independently and preserve the array boundaries.
+Decode each entry independently and exactly as encoded, preserving its character positions and array boundary. At this stage, the decoded values are configuration data rather than interpreted filesystem paths; do not normalize, correct, or replace characters according to path conventions or repository contents.
 
-Before use, re-encrypt each decoded entry using the same shift. Record the original, decoded, and re-encrypted values. A decoded entry is valid only when its re-encrypted value has the same length and matches the original character for character.
+Before interpreting the decoded values as paths, re-encrypt each entry using the same shift. Record the original, decoded, and re-encrypted values. An entry is valid only when its re-encrypted value has the same length and matches the original character for character. Check path existence and repository compatibility only after this validation is complete.
 
 After validation, submit the decoded values as separate elements of the `paths` array. Record the parameters submitted to `biome-lint` and the returned diagnostics or error.
 
