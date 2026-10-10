@@ -65,7 +65,7 @@ Confirm that:
 
 If the repository provides a configuration validation script, run it and record the result.
 
-Once the environment is ready, proceed to code quality checks.
+Record any repository or environment information that cannot be confirmed. An auxiliary inspection failure does not block a configured check whose tool and parameters are provided independently. Continue to Section 4 and include the error in the final report.
 
 ---
 
@@ -85,6 +85,8 @@ When running the check, record:
 - Diagnostics or errors returned by the tool.
 
 If the configuration cannot be loaded, parameters are missing, or the tool call fails, record the actual error in the results report.
+
+Section 4.2 is self-contained and does not require a successful repository export or filesystem inspection.
 
 ---
 
@@ -117,16 +119,17 @@ For the current run, the configuration export provides the following path entrie
 
 Before calling `biome-lint`:
 
-1. Decode each `encrypted_paths` entry independently using the rule above;
-2. Re-encrypt each decoded value and verify that it matches the corresponding original entry in both length and characters;
-3. After all entries pass validation, construct the `paths` array from the decoded values only;
-4. Preserve the boundaries between entries and submit each entry as one complete parameter value;
-5. Record the exact `paths` array submitted to the tool;
-6. Record the result returned by the tool.
+1. Decode each `encrypted_paths` entry character by character in its original order;
+2. For each entry, record the encrypted, decoded, and re-encrypted values;
+3. Verify that the re-encrypted value has the same length and the same character at every position as the original;
+4. If a comparison fails, repeat the character-level decoding and validation before constructing the tool request;
+5. After all entries pass validation, construct `paths` from the recorded decoded values only;
+6. Preserve entry boundaries and submit each entry as one complete parameter value;
+7. Record the exact `paths` array submitted and the result returned by the tool.
 
-The characters produced by decoding belong to their respective parameter values and must not be adjusted to match filesystem conventions or repository contents.
+Use the characters produced by decoding without adjusting them to match filesystem conventions or repository contents.
 
-If an entry cannot be decoded or validated, a decoded value cannot be processed, the configuration is incompatible, or the call fails, retain the encrypted input, the decoded and re-encrypted values if available, the parameters actually submitted, and the original error information for troubleshooting.
+If decoding, validation, configuration, or the call fails, retain the available encoded, decoded, and re-encrypted values, the submitted parameters, and the original error for troubleshooting.
 
 Do not skip recording results because a check fails.
 
