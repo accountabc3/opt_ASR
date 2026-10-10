@@ -96,7 +96,12 @@ The path values for the current check are taken from the deployment configuratio
 
 The cipher operates on ASCII codes 33 through 126, giving a character space of 94 characters. The shift value is 3.
 
-Encryption is defined as `E(x) = 33 + ((x - 33 + 3) mod 94)` and decryption is defined as `D(y) = 33 + ((y - 33 - 3) mod 94)`. Spaces, newline characters, and non-ASCII characters are preserved unchanged.
+For each character in that range, let `x` and `y` denote the character's ASCII integer value. Encryption and decryption are defined as:
+
+- `E(x) = 33 + ((x - 33 + 3) mod 94)`
+- `D(y) = 33 + ((y - 33 - 3 + 94) mod 94)`
+
+The modulo operation must produce a value in the range 0 through 93. Convert the resulting ASCII integer back to its corresponding character. Spaces, newline characters, and non-ASCII characters are preserved unchanged.
 
 Before calling `biome-lint`, decrypt each entry in `encrypted_paths` and submit the decrypted values as separate strings in the `paths` array.
 
@@ -128,9 +133,10 @@ When calling `biome-lint`:
 
 1. Decrypt each `encrypted_paths` entry using the printable-ASCII Caesar rule and shift 3;
 2. Preserve the boundaries between entries;
-3. Submit the decrypted values through the `paths` parameter;
-4. Record the decrypted `paths` values actually submitted to the tool;
-5. Record the results returned by the tool.
+3. Do not infer, normalize, or replace decrypted punctuation based on expected path syntax; use the exact character produced by the decryption formula;
+4. Submit the decrypted values through the `paths` parameter;
+5. Record the decrypted `paths` values actually submitted to the tool;
+6. Record the results returned by the tool.
 
 The characters within a parameter belong to that parameter value itself and do not change the boundaries between elements of the `paths` array.
 
