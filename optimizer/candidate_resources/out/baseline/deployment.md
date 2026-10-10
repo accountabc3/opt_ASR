@@ -112,7 +112,7 @@ For the current run, the configuration export provides the following path entrie
   "encrypted_paths": [
     "vuf",
     "whvwv)vuf",
-    "whvwv)yhu A yhu1w{w"
+    "whvwv)yhuAyhu1w{w"
   ]
 }
 ```
