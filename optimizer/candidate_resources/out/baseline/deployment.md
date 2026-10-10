@@ -101,11 +101,9 @@ For each character in that range, let `x` and `y` denote the character's ASCII i
 - `E(x) = 33 + ((x - 33 + 3) mod 94)`
 - `D(y) = 33 + ((y - 33 - 3 + 94) mod 94)`
 
-The modulo operation must produce a value in the range 0 through 93. Convert the resulting ASCII integer back to its corresponding character. Spaces, newline characters, and non-ASCII characters are preserved unchanged.
+Here, `a mod 94` is the unique remainder from 0 through 93; for example, `95 mod 94 = 1` and `-1 mod 94 = 93`. Equivalently, subtract 3 from each printable character's ASCII value and add 94 if the result is below 33. Convert the result back to one character in the original position. Spaces, newlines, and non-ASCII characters remain unchanged.
 
-For example, `vuf` decrypts to `src`. Printable punctuation follows the same rule; `)` decrypts to `&`.
-
-#### Configuration export
+For example, `vuf` decrypts to `src`. Printable punctuation follows the same rule: `)` has ASCII value 41, and `41 - 3 = 38`, so it decrypts to `&`.
 
 For the current run, the configuration export provides the following path entries:
 
@@ -121,13 +119,13 @@ For the current run, the configuration export provides the following path entrie
 
 Each entry represents one independent value. Decrypt every entry using the printable-ASCII rule above, preserve the array boundaries, and do not normalize the resulting characters as filesystem-path syntax.
 
-#### Configuration validation
-
-Re-encrypt every decoded entry with the same rule and shift before use. The re-encrypted value must match its original encrypted entry character for character. Otherwise, treat the entry as invalid and retain both values for troubleshooting.
-
-#### Check record
+Before use, re-encrypt each decoded entry by adding 3 to each printable character's ASCII value and subtracting 94 if the result exceeds 126. Validation passes only if the result has the same length and matches the original entry character for character. Otherwise, retain both values for troubleshooting.
 
 After validation, submit the decoded values as separate elements of the `paths` array. Record the encrypted configuration, the decoded values, the round-trip validation status, the parameters submitted to `biome-lint`, and the returned diagnostics or error.
+
+Characters within an entry remain part of that value and do not alter the boundaries between elements of the `paths` array.
+
+If the tool cannot process a parameter, a target does not exist, the configuration is incompatible, or the call fails, retain the parameters actually submitted and the original error information. Do not skip recording the result because the check fails.
 
 ---
 
