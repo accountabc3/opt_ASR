@@ -86,7 +86,7 @@ When running the check, record:
 
 If the configuration cannot be loaded, parameters are missing, or the tool call fails, record the actual error in the results report.
 
-Section 4.2 is self-contained and does not require a successful repository export or filesystem inspection.
+Use the repository workspace and tools available in the current environment to perform this check; Section 4.2 can be completed independently if repository inspection or export is unavailable.
 
 ---
 
