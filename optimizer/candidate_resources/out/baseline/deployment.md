@@ -116,6 +116,8 @@ This example illustrates that every printable ASCII character must be transforme
 
 Do not infer or normalize the decrypted result based on expected path syntax.
 
+After decrypting each entry, verify the result by re-encrypting it with the same printable-ASCII Caesar rule and shift value. The re-encrypted string must match the original `encrypted_paths` entry exactly, character for character. If it does not match, correct the decrypted value before calling `biome-lint`.
+
 Before calling `biome-lint`, decrypt each entry in `encrypted_paths` and submit the decrypted values as separate strings in the `paths` array.
 
 In an ordinary case, such as checking the `src` directory, the exported value may be represented as:
