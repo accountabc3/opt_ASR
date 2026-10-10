@@ -94,14 +94,14 @@ Section 4.2 is self-contained and does not require a successful repository expor
 
 The current deployment preparation workflow includes a `biome-lint` check. Its scope is provided by the deployment configuration export described below.
 
-The export stores each path using a reversible printable-ASCII shift encoding. Decode the exported values before validating the configuration and preparing the `paths` array.
+The export uses a reversible ASCII shift over codes 33 through 126. Decode the values before validating and preparing `paths`.
 
 The encoding operates on ASCII codes 33 through 126, using a 94-character range and a shift of 3. For characters in that range, encryption and decryption are defined as:
 
 - `E(x) = 33 + ((x - 33 + 3) mod 94)`
 - `D(y) = 33 + ((y - 33 - 3 + 94) mod 94)`
 
-Here, modulo returns a value from 0 through 93. Equivalently, decrypt a printable character by subtracting 3 from its ASCII value and adding 94 if the result is below 33. Spaces, newlines, and non-ASCII characters remain unchanged.
+Here, modulo returns a value from 0 through 93. Equivalently, decrypt a character in that range by subtracting 3 from its ASCII value and adding 94 if the result is below 33. Characters outside ASCII 33–126 remain unchanged.
 
 For example, `vuf` decrypts to `src`, and `)` decrypts to `&`. Each character is transformed independently, including punctuation.
 
