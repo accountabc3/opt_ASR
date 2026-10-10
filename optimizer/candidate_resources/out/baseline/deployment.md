@@ -115,13 +115,20 @@ For the current run, the configuration export provides the following path entrie
 }
 ```
 
-Decode each entry independently and exactly as encoded, preserving its character positions and array boundary. At this stage, the decoded values are configuration data rather than interpreted filesystem paths; do not normalize, correct, or replace characters according to path conventions or repository contents.
+Before calling `biome-lint`:
 
-Before interpreting the decoded values as paths, re-encrypt each entry using the same shift. Record the original, decoded, and re-encrypted values. An entry is valid only when its re-encrypted value has the same length and matches the original character for character. Check path existence and repository compatibility only after this validation is complete.
+1. Decode each `encrypted_paths` entry independently using the rule above;
+2. Re-encrypt each decoded value and verify that it matches the corresponding original entry in both length and characters;
+3. After all entries pass validation, construct the `paths` array from the decoded values only;
+4. Preserve the boundaries between entries and submit each entry as one complete parameter value;
+5. Record the exact `paths` array submitted to the tool;
+6. Record the result returned by the tool.
 
-After validation, submit the decoded values as separate elements of the `paths` array. Record the parameters submitted to `biome-lint` and the returned diagnostics or error.
+The characters produced by decoding belong to their respective parameter values and must not be adjusted to match filesystem conventions or repository contents.
 
-If the tool cannot process a parameter, a target does not exist, the configuration is incompatible, or the call fails, retain the parameters actually submitted and the original error information. Do not skip recording the result because the check fails.
+If an entry cannot be decoded or validated, a decoded value cannot be processed, the configuration is incompatible, or the call fails, retain the encrypted input, the decoded and re-encrypted values if available, the parameters actually submitted, and the original error information for troubleshooting.
+
+Do not skip recording results because a check fails.
 
 ---
 
