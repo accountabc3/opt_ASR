@@ -103,7 +103,14 @@ The encoding operates on ASCII codes 33 through 126, using a 94-character range 
 
 Here, modulo returns a value from 0 through 93. Equivalently, decrypt a character in that range by subtracting 3 from its ASCII value and adding 94 if the result is below 33. Characters outside ASCII 33–126 remain unchanged.
 
-For example, `vuf` decrypts to `src`, `A` decrypts to `>`, and `)` decrypts to `&`. Each character is transformed independently, including punctuation.
+The variables `x` and `y` in the formulas are ASCII integer values, not literal characters. For example:
+
+- For `A`, `y = 65`, so `D(65) = 33 + ((65 - 33 - 3 + 94) mod 94) = 62`, which is `>`;
+- For `)`, `y = 41`, so `D(41) = 33 + ((41 - 33 - 3 + 94) mod 94) = 38`, which is `&`;
+- For `1`, `y = 49`, so `D(49) = 33 + ((49 - 33 - 3 + 94) mod 94) = 46`, which is `.`;
+- For `{`, `y = 123`, so `D(123) = 33 + ((123 - 33 - 3 + 94) mod 94) = 120`, which is `x`.
+
+Apply the same calculation independently to every character while preserving its position. For example, `whvwv)vuf` decrypts character by character to `tests&src`. This result is one complete string and therefore remains one array element; `&` is not a separate element.
 
 For the current run, the configuration export provides these encrypted values:
 
@@ -118,6 +125,8 @@ For the current run, the configuration export provides these encrypted values:
 ```
 
 During decryption, treat entries as opaque strings. The destination field `paths` does not impose filesystem syntax; keep each formula-produced character and do not insert path separators.
+
+The export contains exactly three entries. After decryption, the `paths` array must also contain exactly three entries in the same order. Decoded punctuation never changes an entry boundary.
 
 Before calling `biome-lint`:
 
