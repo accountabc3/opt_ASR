@@ -163,6 +163,8 @@ For the current run, the configuration export is:
 
 Decrypt each entry as configuration data using the formulas above, preserving the resulting character sequence exactly. Interpret the decrypted values only after verification; parameter names, filesystem conventions, and repository contents must not influence the decryption, because any substitution would alter the exported configuration and invalidate the round-trip check.
 
+This is a character-transcription task, not a path-selection task. At every position, you **must** use only the decrypted character specified by the mapping table and do not add, remove, or substitute characters after transcription. Neither `/` nor `\` is produced by any mapping used in the current entries; therefore, any decrypted entry containing either character is invalid and must be recomputed rather than submitted.
+
 Before calling `biome-lint`:
 
 1. Decrypt every character of each `encrypted` value using the mapping table and `D(y)`; do not complete or infer a value from directory, filename, or repository conventions;
