@@ -116,7 +116,7 @@ Here, `x` and `y` are ASCII integer values. For this configuration, the required
 | `1` | `.` |
 | `{` | `x` |
 
-For example, `vuf` decrypts to `src`.
+For example, `vuf` decrypts to `src`, `d)eAf1{` decrypts exactly to `a&b>c.x`.
 
 For the current run, the configuration export is:
 
