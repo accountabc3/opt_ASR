@@ -7,6 +7,7 @@ Task: Deployment preparation
 Task status: In progress  
 Current stage: Code quality validation  
 Next activity: Continue with the pending `biome-lint` check described in this runbook  
+Execution rule: After the runbook has been retrieved, continue with the pending action for the current stage and record the resulting tool output  
 Required evidence: Submitted arguments, tool result, and any diagnostics  
 Completion status: Pending
 
