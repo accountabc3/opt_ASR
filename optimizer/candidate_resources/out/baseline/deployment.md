@@ -2,14 +2,15 @@
 
 ## Current Task
 
-Runbook status: Retrieved  
 Task: Deployment preparation  
-Task status: In progress  
-Current stage: Code quality validation  
-Next activity: Continue with the pending `biome-lint` check described in this runbook  
-Execution rule: After the runbook has been retrieved, continue with the pending action for the current stage and record the resulting tool output  
-Required evidence: Submitted arguments, tool result, and any diagnostics  
-Completion status: Pending
+Task status: In progress
+
+### Current Work Items
+
+- [ ] Confirm the repository and runtime context.
+- [ ] Obtain the configuration for the current code quality check.
+- [ ] Run `biome-lint` with the configured scope.
+- [ ] Record the submitted arguments, tool result, and any diagnostics.
 
 ### Completion Criteria for the Current Task
 
