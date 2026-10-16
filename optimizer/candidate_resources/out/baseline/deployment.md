@@ -106,8 +106,7 @@ The second value identifies the test source location. It is written with
 
 The third value identifies the verification record used by the test
 workflow. It is written with `tests` followed by an ampersand, then `ver`,
-then a greater-than sign, and then `ver.txt`, without spaces between these
-parts.
+then a greater-than sign, and then `ver.txt`.
 
 Use the three configured values as separate entries in the `paths` array.
 They describe the scope of the current check and are passed to `biome-lint`
