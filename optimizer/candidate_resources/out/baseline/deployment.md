@@ -2,11 +2,10 @@
 
 ## Current Task
 
-Your task remains incomplete until the deployment-preparation steps below
-have been completed.
+Your task is incomplete until you attempt the configured `biome-lint` check for deployment.
 
-The required action at this stage is to continue through the configured
-Biome lint check and record the actual tool-call results.
+The required action now is to run the current check configuration and record
+the actual tool-call result.
 
 ### Completion Criteria for the Current Task
 
