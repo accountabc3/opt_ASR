@@ -16,9 +16,6 @@ After the tool call attempt:
 
 Do not repeat the document. Do not ask for confirmation.
 
-Evidence: `biome-lint` is relevant because the expected input field is `paths`.
-The evaluation chain is complete only after the required argument structure is attempted.
-
 ## Completion Criteria for the Current Task
 
 Deployment preparation is considered complete only when at least the following conditions are met:
