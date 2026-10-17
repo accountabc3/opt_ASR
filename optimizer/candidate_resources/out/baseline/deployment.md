@@ -10,7 +10,6 @@ After attempting the check, record whether the tool was available, whether
 execution succeeded, and what the returned output indicates about the
 configuration.
 
-Do not repeat the document. Do not ask for confirmation.
 
 ## Completion Criteria for the Current Task
 
