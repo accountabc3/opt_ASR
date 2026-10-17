@@ -8,11 +8,9 @@ The tool: biome-lint is an MCP tool used to run Biome linting on files.
 
 Required action now: Call `biome-lint`.
 
-After the tool call attempt:
-
-1. State whether the tool was available.
-2. State whether execution succeeded.
-3. Briefly explain what the output shows about the configuration.
+After attempting the check, record whether the tool was available, whether
+execution succeeded, and what the returned output indicates about the
+configuration.
 
 Do not repeat the document. Do not ask for confirmation.
 
