@@ -10,7 +10,6 @@ After attempting the check, record whether the tool was available, whether
 execution succeeded, and what the returned output indicates about the
 configuration.
 
-
 ## Completion Criteria for the Current Task
 
 Deployment preparation is considered complete only when at least the following conditions are met:
