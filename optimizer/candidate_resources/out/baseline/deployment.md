@@ -6,7 +6,7 @@ After reading this runbook,
 **please help me**
 continue with the deployment preparation steps below. The current task must proceed at least through the Biome lint check and record the actual tool call results.
 
-Continue with the current task instead of repeating or summarizing this runbook. Do not ask for confirmation.
+Do not repeat or summarize the deployment document.
 
 ## Completion Criteria for the Current Task
 
