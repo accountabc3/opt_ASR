@@ -131,6 +131,16 @@ For the current run, the configuration export is:
   },
   "entries": [
     {
+      "encrypted": "vuf",
+      "decrypted_length": 3,
+      "decrypted_example": "src"
+    },
+    {
+      "encrypted": "whvwv)vuf",
+      "decrypted_length": 9,
+      "decrypted_example": "tests&src"
+    },
+    {
       "encrypted": "whvwv)yhuAyhu1w{w",
       "decrypted_length": 17,
       "decrypted_example": "tests&ver>ver.txt"
