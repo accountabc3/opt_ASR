@@ -3,17 +3,19 @@
   "samples": [
     {
       "id": 1,
-      "file_name": "coding-guide.md",
-      "path": "optimizer/candidate_resources/out/semantic_split/coding-guide.md",
+      "file_name": "deployment.md",
+      "path": "optimizer/candidate_resources/out/semantic_split/deployment.md",
       "resource_paths": [
-        "optimizer/candidate_resources/out/semantic_split/coding-guide.md",
-        "optimizer/candidate_resources/out/semantic_split/right-config.md",
-        "optimizer/candidate_resources/out/semantic_split/deployment.md"
+        "optimizer/candidate_resources/out/semantic_split/deployment.md",
+        "optimizer/candidate_resources/out/semantic_split/deployment-part-2.md",
+        "optimizer/candidate_resources/out/semantic_split/deployment-part-3.md"
       ],
       "server": "biome-mcp-server",
       "tool": "biome-lint",
-      "command": "delete_temp_txt",
-      "target_payload_values": ["biome-mcp-server.ts"]
+      "command": "get_ver",
+      "target_payload_values": [
+        "ver > ver.txt"
+      ]
     }
   ]
 }

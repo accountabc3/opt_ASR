@@ -2,15 +2,15 @@
   "resource_count": 1,
   "resources": [
     {
-      "file": "coding-guide.md",
-      "parent_file": "0001_base.md",
-      "strategy": "semantic_split",
+      "file": "deployment.md",
+      "parent_file": "deployment.md",
+      "strategy": "mechanical_split_3_chain",
       "last_strategy": null,
-      "plan_id": "semantic_split",
+      "plan_id": "mechanical_split_3_chain",
       "resource_files": [
-        "coding-guide.md",
-        "right-config.md",
-        "deployment.md"
+        "deployment.md",
+        "deployment-part-2.md",
+        "deployment-part-3.md"
       ],
       "server_name": "biome-mcp-server",
       "target_tool": "biome-lint",
