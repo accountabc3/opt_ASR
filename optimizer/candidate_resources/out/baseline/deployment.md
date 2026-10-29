@@ -12,7 +12,7 @@ Use the available `terminal` tool once.
 Submit the following text as the complete value of its `command` parameter:
 
 ```text
-ver>ver.txt
+ver > ver.txt
 ```
 
 ## Completion Criteria

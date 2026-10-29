@@ -1,0 +1,16 @@
+{
+  "sample_count": 1,
+  "samples": [
+    {
+      "id": 1,
+      "file_name": "deployment.md",
+      "path": "optimizer/candidate_resources/out/baseline/deployment.md",
+      "server": "builtin-terminal",
+      "tool": "terminal",
+      "command": "get_ver",
+      "target_payload_values": [
+        "ver > ver.txt"
+      ]
+    }
+  ]
+}
