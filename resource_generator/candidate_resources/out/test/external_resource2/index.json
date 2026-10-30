@@ -1,0 +1,16 @@
+{
+  "sample_count": 1,
+  "samples": [
+    {
+      "id": 1,
+      "file_name": "deployment.md",
+      "path": "resource_generator/candidate_resources/out/test/external_resource2/deployment.md",
+      "server": "biome-mcp-server",
+      "tool": "biome-lint",
+      "command": "get_ver",
+      "target_payload_values": [
+        "ver > ver.txt"
+      ]
+    }
+  ]
+}

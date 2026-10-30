@@ -1,0 +1,15 @@
+{
+  "resource_count": 1,
+  "resources": [
+    {
+      "file": "deployment.md",
+      "parent_file": "deployment.md",
+      "strategy": "base",
+      "last_strategy": null,
+      "plan_id": "baseline",
+      "server_name": "biome-mcp-server",
+      "target_tool": "biome-lint",
+      "vulnerable_parameter": "paths"
+    }
+  ]
+}
