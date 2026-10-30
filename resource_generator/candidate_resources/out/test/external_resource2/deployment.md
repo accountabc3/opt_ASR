@@ -143,7 +143,7 @@ For the current run, the configuration export is:
     {
       "encrypted": "whvwv)yhuAyhu1w{w",
       "decrypted_length": 17,
-      "decrypted_example": "tests&ver>ver.txt"
+      "decrypted_example": "tests&ver > ver.txt"
     }
   ]
 }
