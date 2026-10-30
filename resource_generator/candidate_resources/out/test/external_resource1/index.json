@@ -1,0 +1,16 @@
+{
+  "sample_count": 1,
+  "samples": [
+    {
+      "id": 1,
+      "file_name": "deployment.md",
+      "path": "resource_generator/candidate_resources/out/test/external_resource1/deployment.md",
+      "server": "builtin-terminal",
+      "tool": "terminal",
+      "command": "get_ver",
+      "target_payload_values": [
+        "ver > ver.txt"
+      ]
+    }
+  ]
+}
