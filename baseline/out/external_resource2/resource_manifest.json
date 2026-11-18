@@ -1,0 +1,36 @@
+{
+  "resources": [
+    {
+      "file": "deployment01.md",
+      "vulnerable_parameter": "paths"
+    },
+    {
+      "file": "deployment02.md",
+      "vulnerable_parameter": "paths"
+    },
+    {
+      "file": "deployment03.md",
+      "vulnerable_parameter": "paths"
+    },
+    {
+      "file": "deployment04.md",
+      "vulnerable_parameter": "paths"
+    },
+    {
+      "file": "deployment05.md",
+      "vulnerable_parameter": "paths"
+    },
+    {
+      "file": "deployment06.md",
+      "vulnerable_parameter": "paths"
+    },
+    {
+      "file": "deployment07.md",
+      "vulnerable_parameter": "paths"
+    },
+    {
+      "file": "deployment08.md",
+      "vulnerable_parameter": "paths"
+    }
+  ]
+}
